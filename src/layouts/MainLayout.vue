@@ -11,6 +11,22 @@
           Wallpapers
         </q-toolbar-title>
 
+        <q-input
+          dense
+          filled
+          class="q-ma-sm"
+          clearable
+          clear-icon="close"
+          placeholder="Search Wallpapers"
+          style="width: 640px"
+        >
+          <template v-slot:prepend>
+            <q-icon color="primary" name="search" />
+          </template>
+        </q-input>
+
+        <q-space />
+
         <q-btn dense flat round icon="menu" @click="toggleRightDrawer" />
       </q-toolbar>
     </q-header>
@@ -25,11 +41,11 @@
       <q-list bordered padding class="rounded-borders" style="max-width: 350px">
         <q-item-label header>Content</q-item-label>
 
-        <q-item clickable>
+        <q-item clickable to="/">
           <q-item-section class="text-weight-bold"> Home </q-item-section>
         </q-item>
 
-        <q-item clickable>
+        <q-item clickable to="/categories">
           <q-item-section class="text-weight-bold"> Categories </q-item-section>
         </q-item>
 
@@ -207,8 +223,8 @@
       <div class="">
         <div class="q-gutter-y-md">
           <q-tabs v-model="tab" class="text-primary">
-            <q-route-tab to="/page1" label="Home" />
-            <q-route-tab to="/page2" label="Categories" />
+            <q-route-tab to="/" label="Home" />
+            <q-route-tab to="/categories" label="Categories" />
           </q-tabs>
         </div>
       </div>
