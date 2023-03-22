@@ -1,22 +1,18 @@
 <template>
   <q-layout view="hhr lpR fFr">
-    <q-header reveal bordered class="bg-primary text-white" height-hint="98">
+    <q-header reveal bordered class="bg-white text-primary" height-hint="98">
       <q-toolbar>
-        <q-toolbar-title>
-          <q-avatar>
-            <img src="https://cdn.quasar.dev/logo-v2/svg/logo-mono-white.svg" />
+        <q-toolbar-title class="text-weight-bold">
+          <q-avatar font-size="32px" icon="wallpaper">
+            <!-- <img
+              src="https://img.icons8.com/external-vitaliy-gorbachev-lineal-vitaly-gorbachev/60/null/external-wallpaper-stay-home-vitaliy-gorbachev-lineal-vitaly-gorbachev.png"
+            /> -->
           </q-avatar>
-          Title
+          Wallpapers
         </q-toolbar-title>
 
         <q-btn dense flat round icon="menu" @click="toggleRightDrawer" />
       </q-toolbar>
-
-      <q-tabs align="left">
-        <q-route-tab to="/page1" label="Page One" />
-        <q-route-tab to="/page2" label="Page Two" />
-        <q-route-tab to="/page3" label="Page Three" />
-      </q-tabs>
     </q-header>
 
     <q-drawer
@@ -30,6 +26,14 @@
     </q-drawer>
 
     <q-page-container>
+      <div class="">
+        <div class="q-gutter-y-md">
+          <q-tabs v-model="tab" class="text-primary">
+            <q-route-tab to="/page1" label="Home" />
+            <q-route-tab to="/page2" label="Categories" />
+          </q-tabs>
+        </div>
+      </div>
       <router-view />
     </q-page-container>
   </q-layout>
