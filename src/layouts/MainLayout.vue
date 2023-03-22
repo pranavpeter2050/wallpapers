@@ -225,7 +225,7 @@
         <q-separator spaced />
         <q-item-label header>Important info</q-item-label>
 
-        <q-item clickable>
+        <q-item clickable to="/privacy">
           <q-item-section class="text-weight-bold"> Privacy </q-item-section>
         </q-item>
 
@@ -235,7 +235,7 @@
           </q-item-section>
         </q-item>
 
-        <q-item clickable>
+        <q-item clickable to="/terms-and-conditions">
           <q-item-section class="text-weight-bold">
             Terms & Conditions
           </q-item-section>
