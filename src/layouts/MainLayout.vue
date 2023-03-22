@@ -41,7 +41,7 @@
       <q-list bordered padding class="rounded-borders" style="max-width: 350px">
         <q-item-label header>Content</q-item-label>
 
-        <q-item clickable to="/">
+        <q-item clickable to="/home">
           <q-item-section class="text-weight-bold"> Home </q-item-section>
         </q-item>
 
@@ -223,7 +223,7 @@
       <div class="">
         <div class="q-gutter-y-md">
           <q-tabs v-model="tab" class="text-primary">
-            <q-route-tab to="/" label="Home" />
+            <q-route-tab to="/home" label="Home" />
             <q-route-tab to="/categories" label="Categories" />
           </q-tabs>
         </div>
