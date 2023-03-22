@@ -2,7 +2,7 @@
   <q-layout view="hhr lpR fFr">
     <q-header reveal bordered class="bg-white text-primary" height-hint="98">
       <q-toolbar>
-        <q-toolbar-title class="text-weight-bold">
+        <q-toolbar-title class="text-weight-bold" to="/home">
           <q-avatar font-size="32px" icon="wallpaper">
             <!-- <img
               src="https://img.icons8.com/external-vitaliy-gorbachev-lineal-vitaly-gorbachev/60/null/external-wallpaper-stay-home-vitaliy-gorbachev-lineal-vitaly-gorbachev.png"
@@ -27,7 +27,13 @@
 
         <q-space />
 
-        <q-btn class="text-white bg-primary" flat round icon="arrow_upward" />
+        <q-btn
+          class="text-white bg-primary"
+          flat
+          round
+          icon="arrow_upward"
+          to="/user"
+        />
 
         <q-btn
           class="q-ml-sm text-grey-9"
@@ -108,6 +114,7 @@
               style="width: fit-content"
               padding="xs lg"
               class="text-weight-bold"
+              to="/user"
             />
           </q-item-section>
         </q-item>
