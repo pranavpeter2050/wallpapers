@@ -27,9 +27,53 @@
 
         <q-space />
 
-        <q-btn dense flat round icon="menu" @click="toggleRightDrawer" />
+        <q-btn class="text-white bg-primary" flat round icon="arrow_upward" />
+
+        <q-btn
+          class="q-ml-sm text-grey-9"
+          flat
+          round
+          icon="person"
+          @click="toggleProfileDrawer"
+        />
+        <q-btn
+          class="q-ml-sm text-grey-9"
+          flat
+          round
+          icon="menu"
+          @click="toggleRightDrawer"
+        />
       </q-toolbar>
     </q-header>
+
+    <q-drawer
+      v-model="profileDrawerOpen"
+      side="right"
+      overlay
+      behavior="mobile"
+      bordered
+      class="q-pt-xl"
+    >
+      <q-list padding class="rounded-borders" style="max-width: 350px">
+        <q-item-label header>profile_name</q-item-label>
+
+        <q-item clickable to="/home" exact>
+          <q-item-section class="text-weight-bold">
+            Profile Page
+          </q-item-section>
+        </q-item>
+
+        <q-item clickable to="/categories" exact>
+          <q-item-section class="text-weight-bold">
+            Account Settings
+          </q-item-section>
+        </q-item>
+
+        <q-item clickable to="/categories" exact>
+          <q-item-section class="text-weight-bold"> Logout </q-item-section>
+        </q-item>
+      </q-list>
+    </q-drawer>
 
     <q-drawer
       v-model="rightDrawerOpen"
@@ -37,8 +81,9 @@
       overlay
       behavior="mobile"
       bordered
+      class="q-pt-xl"
     >
-      <q-list bordered padding class="rounded-borders" style="max-width: 350px">
+      <q-list padding class="rounded-borders" style="max-width: 350px">
         <q-item-label header>Content</q-item-label>
 
         <q-item clickable to="/home" exact>
@@ -239,11 +284,16 @@ import { ref } from "vue";
 export default {
   setup() {
     const rightDrawerOpen = ref(false);
+    const profileDrawerOpen = ref(false);
 
     return {
       rightDrawerOpen,
       toggleRightDrawer() {
         rightDrawerOpen.value = !rightDrawerOpen.value;
+      },
+      profileDrawerOpen,
+      toggleProfileDrawer() {
+        profileDrawerOpen.value = !profileDrawerOpen.value;
       },
     };
   },
