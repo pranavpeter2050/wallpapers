@@ -15,6 +15,11 @@ const routes = [
         name: "Categories",
       },
       {
+        path: "/user",
+        component: () => import("pages/ProfilePage.vue"),
+        name: "My uploads",
+      },
+      {
         path: "/privacy",
         component: () => import("pages/PrivacyPage.vue"),
         name: "Privacy",
