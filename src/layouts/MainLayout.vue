@@ -63,13 +63,13 @@
       <q-list padding class="rounded-borders" style="max-width: 350px">
         <q-item-label header>profile_name</q-item-label>
 
-        <q-item clickable to="/home" exact>
+        <q-item clickable to="/user" exact>
           <q-item-section class="text-weight-bold">
             Profile Page
           </q-item-section>
         </q-item>
 
-        <q-item clickable to="/categories" exact>
+        <q-item clickable to="/settings" exact>
           <q-item-section class="text-weight-bold">
             Account Settings
           </q-item-section>
@@ -275,8 +275,13 @@
       <div class="">
         <div class="q-gutter-y-md">
           <q-tabs v-model="tab" class="text-primary">
-            <q-route-tab to="/home" label="Home" exact />
-            <q-route-tab to="/categories" label="Categories" exact />
+            <q-route-tab name="home" to="/home" label="Home" exact />
+            <q-route-tab
+              name="categories"
+              to="/categories"
+              label="Categories"
+              exact
+            />
           </q-tabs>
         </div>
       </div>
@@ -302,6 +307,7 @@ export default {
       toggleProfileDrawer() {
         profileDrawerOpen.value = !profileDrawerOpen.value;
       },
+      tab: ref("home"),
     };
   },
 };

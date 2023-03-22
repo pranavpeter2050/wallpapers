@@ -53,7 +53,7 @@ export default defineComponent({
   name: "ProfilePage",
   setup() {
     return {
-      tab: ref("mails"),
+      tab: ref("uploads"),
     };
   },
 });
