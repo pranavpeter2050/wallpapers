@@ -22,21 +22,15 @@
       behavior="mobile"
       bordered
     >
-      <q-list
-        dense
-        bordered
-        padding
-        class="rounded-borders"
-        style="max-width: 350px"
-      >
+      <q-list bordered padding class="rounded-borders" style="max-width: 350px">
         <q-item-label header>Content</q-item-label>
 
         <q-item clickable>
-          <q-item-section> Home </q-item-section>
+          <q-item-section class="text-weight-bold"> Home </q-item-section>
         </q-item>
 
         <q-item clickable>
-          <q-item-section> Categories </q-item-section>
+          <q-item-section class="text-weight-bold"> Categories </q-item-section>
         </q-item>
 
         <q-separator spaced />
@@ -52,6 +46,7 @@
               no-caps
               style="width: fit-content"
               padding="xs lg"
+              class="text-weight-bold"
             />
           </q-item-section>
         </q-item>
@@ -170,30 +165,40 @@
         <q-item-label header>Important info</q-item-label>
 
         <q-item clickable>
-          <q-item-section> Privacy </q-item-section>
+          <q-item-section class="text-weight-bold"> Privacy </q-item-section>
         </q-item>
 
         <q-item clickable>
-          <q-item-section> Community Guidelines </q-item-section>
+          <q-item-section class="text-weight-bold">
+            Community Guidelines
+          </q-item-section>
         </q-item>
 
         <q-item clickable>
-          <q-item-section> Terms & Conditions </q-item-section>
+          <q-item-section class="text-weight-bold">
+            Terms & Conditions
+          </q-item-section>
         </q-item>
 
         <q-item clickable>
-          <q-item-section> DMCA/Copyright </q-item-section>
+          <q-item-section class="text-weight-bold">
+            DMCA/Copyright
+          </q-item-section>
         </q-item>
 
         <q-separator spaced />
         <q-item-label header>Social</q-item-label>
 
         <q-item clickable>
-          <q-item-section> Facebook link </q-item-section>
+          <q-item-section class="text-weight-bold">
+            Facebook link
+          </q-item-section>
         </q-item>
 
         <q-item clickable>
-          <q-item-section> Twitter link </q-item-section>
+          <q-item-section class="text-weight-bold">
+            Twitter link
+          </q-item-section>
         </q-item>
       </q-list>
     </q-drawer>
