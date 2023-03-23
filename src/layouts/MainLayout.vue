@@ -314,6 +314,11 @@ export default {
 </script>
 
 <style>
+a {
+  text-decoration: none;
+  color: unset;
+}
+
 .flex-h-center {
   display: flex;
   justify-content: center;
