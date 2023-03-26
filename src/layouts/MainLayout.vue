@@ -1,54 +1,62 @@
 <template>
   <q-layout view="hhr lpR fFr">
     <q-header reveal bordered class="bg-white text-primary" height-hint="98">
-      <q-toolbar>
-        <q-toolbar-title class="text-weight-bold" to="/home">
-          <q-avatar font-size="32px" icon="wallpaper">
-            <!-- <img
-              src="https://img.icons8.com/external-vitaliy-gorbachev-lineal-vitaly-gorbachev/60/null/external-wallpaper-stay-home-vitaliy-gorbachev-lineal-vitaly-gorbachev.png"
-            /> -->
-          </q-avatar>
-          Wallpapers
-        </q-toolbar-title>
+      <q-toolbar class="header-wrappr">
+        <div class="header-logo-wrappr">
+          <q-toolbar-title class="text-weight-bold" to="/home">
+            <q-avatar font-size="32px" icon="wallpaper">
+              <!-- <img
+                src="https://img.icons8.com/external-vitaliy-gorbachev-lineal-vitaly-gorbachev/60/null/external-wallpaper-stay-home-vitaliy-gorbachev-lineal-vitaly-gorbachev.png"
+              /> -->
+            </q-avatar>
+            Wallpapers
+          </q-toolbar-title>
+        </div>
 
-        <q-input
-          dense
-          filled
-          class="q-ma-sm"
-          clearable
-          clear-icon="close"
-          placeholder="Search Wallpapers"
-          style="width: 640px"
-        >
-          <template v-slot:prepend>
-            <q-icon color="primary" name="search" />
-          </template>
-        </q-input>
+        <div class="header-search">
+          <q-input
+            dense
+            filled
+            class="q-ma-sm gt-xs"
+            clearable
+            clear-icon="close"
+            placeholder="Search Wallpapers"
+          >
+            <template v-slot:prepend>
+              <q-icon color="primary" name="search" />
+            </template>
+          </q-input>
+        </div>
 
-        <q-space />
+        <!-- <q-space /> -->
 
-        <q-btn
-          class="text-white bg-primary"
-          flat
-          round
-          icon="arrow_upward"
-          to="/user"
-        />
+        <div class="header-settings-menu">
+          <q-btn class="q-ml-sm text-grey-9 lt-sm" flat round icon="search" />
 
-        <q-btn
-          class="q-ml-sm text-grey-9"
-          flat
-          round
-          icon="person"
-          @click="toggleProfileDrawer"
-        />
-        <q-btn
-          class="q-ml-sm text-grey-9"
-          flat
-          round
-          icon="menu"
-          @click="toggleRightDrawer"
-        />
+          <q-btn
+            class="q-ml-sm text-white bg-primary"
+            flat
+            round
+            icon="arrow_upward"
+            to="/user"
+          />
+
+          <q-btn
+            class="q-ml-sm text-grey-9"
+            flat
+            round
+            icon="person"
+            @click="toggleProfileDrawer"
+          />
+
+          <q-btn
+            class="q-ml-sm text-grey-9"
+            flat
+            round
+            icon="menu"
+            @click="toggleRightDrawer"
+          />
+        </div>
       </q-toolbar>
     </q-header>
 
@@ -314,6 +322,14 @@ export default {
 </script>
 
 <style>
+.header-wrappr {
+  justify-content: space-between;
+}
+
+.header-search {
+  width: 45vw;
+}
+
 a {
   text-decoration: none;
   color: unset;
@@ -329,5 +345,11 @@ a {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+@media (max-width: 602px) {
+  .header-search {
+    display: none;
+  }
 }
 </style>
