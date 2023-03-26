@@ -15,7 +15,23 @@
             method="post"
             @submit.prevent="onSubmit"
           >
-            <div class="text-h3">Login</div>
+            <div class="text-h3">Register</div>
+
+            <q-input
+              class="q-mt-lg"
+              outlined
+              name="username"
+              placeholder="Username"
+            />
+
+            <q-input
+              class="q-mt-lg"
+              outlined
+              name="dob"
+              placeholder="Date of birth"
+              type="date"
+              hint="Optional"
+            />
 
             <q-input
               class="q-mt-lg"
@@ -34,7 +50,6 @@
             />
 
             <div class="q-mt-lg flex-h-space-btw custom">
-              <span class="text-primary">Forgot password?</span>
               <q-btn rounded label="Continue" type="submit" color="primary" />
             </div>
           </q-form>
@@ -42,8 +57,8 @@
       </q-card>
 
       <div class="sign-up-wrappr q-mt-md text-center">
-        <span class="text-grey-8">Need an account?</span>
-        <span class="text-primary"><a href="#/register"> Sign up</a></span> |
+        <span class="text-grey-8">Already have an account?</span>
+        <span class="text-primary"><a href="#/login"> Sign In</a></span> |
         <!-- <span class="text-primary"
           ><a href="#">{{ $route }}</a></span
         > -->
@@ -75,7 +90,7 @@
 import { defineComponent, ref } from "vue";
 
 export default defineComponent({
-  name: "LoginPage",
+  name: "RegisterPage",
 });
 </script>
 <style scoped>
