@@ -25,6 +25,11 @@ const routes = [
         name: "Register",
       },
       {
+        path: "/wallpaper",
+        component: () => import("pages/WallpaperPage.vue"),
+        name: "Wallpaper",
+      },
+      {
         path: "/user",
         component: () => import("pages/ProfilePage.vue"),
         name: "My uploads",
